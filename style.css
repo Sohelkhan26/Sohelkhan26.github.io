@@ -1,7 +1,11 @@
 /* GENERAL */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+/* exp */
 
+
+
+/* exp */
 * {
   margin: 0;
   padding: 0;
@@ -326,6 +330,7 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .section-container {
@@ -343,6 +348,7 @@ section {
 
 #experience {
   position: relative;
+  padding-bottom: 100px;
 }
 
 .experience-sub-title {
@@ -377,10 +383,15 @@ article {
 article .icon {
   cursor: default;
 }
+/* login */
+  
+/* login */
 
 /* PROJECTS SECTION */
 
 #projects {
+  padding-top: 100px;
+
   position: relative;
 }
 
