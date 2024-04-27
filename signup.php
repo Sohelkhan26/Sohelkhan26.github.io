@@ -15,12 +15,13 @@ if (isset($_POST["submit"])) {
     $result = mysqli_query($connection, $exist);
     $user = mysqli_fetch_assoc($result);
     if ($user) {
-        echo "Username already exists";
+        echo "<h3 style='margin-left: 42%; margin-top: 30px;'>Username already exists.</h3>";
     } else {
         $insert = "INSERT INTO login (username, password) VALUES ('$username', '$password')";
         $query = mysqli_query($connection, $insert);
         if ($query) {
-            echo "<h2> Successfully Signed up</h2><br>Please go back to login page to login";
+            echo "<h3 style='margin-left: 42%; margin-top: 30px;'>Successfully signed up.</h3>";
+            echo "<h3 style='margin-left: 40%; margin-top: 30px;'>Go back to login page to Login</h3>";
         } else {
             echo "Data not inserted";
         }
@@ -54,7 +55,6 @@ if (isset($_POST["submit"])) {
                     <i class="fas fa-lock"></i>
                     <input type="password" placeholder="Password" required name="password">
                 </div>
-                <div class="pass"><a href="#">Forgot password?</a></div>
                 <div class="row button">
                     <input type="submit" value="Sign Up" name="submit">
                 </div>

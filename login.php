@@ -12,9 +12,9 @@ if (isset($_POST["submit"])) {
     $result = mysqli_query($connection, $exist);
     $user = mysqli_fetch_assoc($result);
     if ($user) {
-        echo "Login Successful";
+        echo "<h3 style='margin-left: 45%; margin-top: 30px;'>Login Successful</h3>";
     } else {
-        echo "Username or Password is incorrect";
+        echo "<h3 style='margin-left: 40%; margin-top: 30px;'>Username or Password is incorrect.</h3>";
     }
 }
 
@@ -47,7 +47,7 @@ if (isset($_POST["submit"])) {
                     <i class="fas fa-lock"></i>
                     <input type="password" placeholder="Password" required name="password">
                 </div>
-                <div class="pass"><a href="#">Forgot password?</a></div>
+                <div class="pass"><a href="login.php">Forgot password?</a></div>
                 <div class="row button">
                     <input type="submit" value="Login" name="submit">
                 </div>
