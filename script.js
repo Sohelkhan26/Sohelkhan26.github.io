@@ -10,11 +10,15 @@ document.addEventListener("DOMContentLoaded", function() {
   const submitButton = document.getElementById("submit");
   const loginForm = document.querySelector(".container");
   
-  submitButton.addEventListener("click", function(event) {
-    console.log("The DOM has loaded");
-    event.preventDefault(); // Prevent default form submission behavior
-    loginForm.style.display = "block"; // Show the login form
-  });
+  if (submitButton) {
+    submitButton.addEventListener("click", function(event) {
+      console.log("The DOM has loaded");
+      event.preventDefault(); // Prevent default form submission behavior
+      if (loginForm) {
+        loginForm.style.display = "block"; // Show the login form
+      }
+    });
+  }
 });
 
 
