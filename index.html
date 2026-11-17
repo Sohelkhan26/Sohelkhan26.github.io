@@ -1,450 +1,697 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mediaqueries.css" />
-  <link rel="stylesheet" href="contactUs.css" />
-  <script src="https://kit.fontawesome.com/36190af118.js" crossorigin="anonymous"></script>
-</head>
+  <title>Md Shahrukh Khan Sohel | Personal Portfolio</title>
+  <meta name="description" content="Personal Developer Portfolio of Md Shahrukh Khan Sohel. Computer Science and Engineering student at KUET, frontend developer, and software engineer." />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
+  <!-- Font Awesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-  <nav id="desktop-nav">
-    <div class="logo">SRKS</div>
-    <div>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <nav id="navbar">
+    <div class="container nav-container">
+      <a href="#profile" class="logo">
+        <span class="logo-badge">S</span>
+        <span>SRKS</span>
+      </a>
+
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </div>
-    <!-- login form -->
 
-    <!-- login form -->
-  </nav>
-  <nav id="hamburger-nav">
-    <div class="logo">SRKS</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
+      <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle Menu">
         <span></span>
         <span></span>
         <span></span>
-      </div>
-      <div class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </div>
+      </button>
     </div>
   </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="mobile-menu-overlay">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ==========================================================================
+       HERO / PROFILE SECTION
+       ========================================================================== -->
   <section id="profile">
-    <div class="section__pic-container">
-      <img src="./assets/profile-pic.jpeg" alt="Sohel's profile picture" id="prof" />
-    </div>
-    <div class="section__text">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1 class="title">Md Shahrukh Khan Sohel</h1>
-      <p class="section__text__p2">Frontend Developer</p>
-      <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
-          Download CV
-        </button>
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">
-          Contact Info
-        </button>
+    <div class="container profile-container">
+      <div class="profile-pic-box">
+        <img src="./assets/profile-pic.jpeg" alt="Md Shahrukh Khan Sohel" />
       </div>
-      <div id="socials-container">
-        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="window.open('https://www.linkedin.com/in/sohel-khan-74199b277/', '_blank')" />
-        <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="window.open('https://github.com/Sohelkhan26', '_blank')" />
-      </div>
-    </div>
-  </section>
-  <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-    <div class="section-container">
-      <div class="section__pic-container">
-        <img src="./assets/about-pic.jpeg" alt="Profile picture" class="about-pic" />
-      </div>
-      <div class="about-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-            <h3>Experience</h3>
-            <p>2+ years <br />Frontend Development</p>
-          </div>
-          <div class="details-container">
-            <img src="./assets/education.png" alt="Education icon" class="icon" />
-            <h3>Education</h3>
-            <p>B.Sc. in CSE</p>
-          </div>
-        </div>
-        <div class="text-container">
-          <p>
-            I am currently student at Khulna University of Engineering and Technology.
-            I am self-taught developer, passionate and very fast learner. I have learned how to program through various resources, currently I am learning on Freecodecamp and Udacity. I am eager to learn and grow - Everyday. My ambition is to make awesome websites, not just good enough.
-          </p>
-        </div>
-      </div>
-    </div>
-    <a href="#experience">
-      <div class="scroll-down"></div>
-    </a>
-  </section>
-  <section id="experience">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Experience</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container">
-          <h2 class="experience-sub-title">Programming Languages</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>C++</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Java</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Python</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Kotlin</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>JavaScript</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>C</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-          </div>
-        </div>
-        <!-- 2nd exp -->
-        <div class="details-container">
-          <h2 class="experience-sub-title">Frontend Development</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3> MySQL</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>HTMl & CSS</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>JavaScript</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Git</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-          </div>
-        </div>
-        <!-- 2nd exp -->
 
-        <!-- 3rd exp -->
+      <div class="profile-text">
+        <p class="profile-greeting" id="hero-greeting">Hello, I'm</p>
+        <h1 class="profile-name" id="hero-name">Md Shahrukh Khan Sohel</h1>
+        <p class="profile-role" id="hero-role">Frontend Developer & Software Engineer</p>
+        <p class="profile-bio" id="hero-bio">
+          Computer Science and Engineering student at Khulna University of Engineering and Technology (KUET). Passionate developer and fast learner dedicated to building intuitive, responsive web applications and solving complex algorithmic problems.
+        </p>
 
-        <!-- <div class="details-container">
-          <h2 class="experience-sub-title">Programming Languages </h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>C++</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>C</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Java</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Python</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-          </div>
-        </div> -->
-
-        <!-- 3rd exp -->
-
-        <!-- 4th exp -->
-
-
-        <!-- <div class="details-container">
-          <h2 class="experience-sub-title">Frontend Development</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>PostgreSQL</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Node JS</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Express JS</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Git</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-          </div>
-        </div> -->
-
-        <!-- 4th exp -->
-      </div>
-    </div>
-    <a href="#projects">
-      <div class="scroll-down"></div>
-    </a>
-  </section>
-  <section id="projects">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Projects</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/project%204%20automated%20lc%20summary.png" alt="Automated LC Problem Solution" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Automated LC Problem Solution</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Sohelkhan26/LC', '_blank')">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Sohelkhan26/LC', '_blank')">
-              Live Demo
-            </button>
-          </div>
+        <div class="btn-group">
+          <button id="btn-download-cv" class="btn btn-secondary">
+            <i class="fa-solid fa-file-arrow-down"></i> Download CV
+          </button>
+          <a href="#contact" class="btn btn-primary">
+            <i class="fa-solid fa-address-card"></i> Contact Info
+          </a>
         </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/project-3.png" alt="Web Programming Lab Project" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Web Programming Lab Project</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Sohelkhan26/Web_Project_Final', '_blank')">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Sohelkhan26/Web_Project_Final', '_blank')">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/project%205%20authored%20summary.png" alt="Authored Problems of LC" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Authored Problems of LC</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Sohelkhan26/LeetCode', '_blank')">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Sohelkhan26/LeetCode', '_blank')">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/android.jpg" alt="Android App for Chatting" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Android App for Chatting</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Sohelkhan26/Barta_a_Messenger_App', '_blank')">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Sohelkhan26/Barta_a_Messenger_App', '_blank')">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/oracle%20db.jpg" alt="Database Project" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Database Project</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Sohelkhan26/art-market-rdbms', '_blank')">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Sohelkhan26/art-market-rdbms', '_blank')">
-              Live Demo
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a href="#contact">
-      <div class="scroll-down"></div>
-    </a>
-  </section>
-  <section id="contact">
-    <ul id="contactUL">
-      <li style="--i:-3;--clr:#1877f2;" data-text="Facebook"><a href="https://www.facebook.com"><span><i class="fa-brands fa-facebook-f"></i></span>Facebook</a>
-      </li>
-      <li style="--i:-2;--clr:#25d366;" data-text="Whatsapp"><a href="whatsapp://send?phone=01575353525"><span><i class="fa-brands fa-whatsapp"></i></span>Whatsapp</a></li>
-      <li style="--i:-1;--clr:#1da1f2;" data-text="Twitter"><a href="https://www.twitter.com"><span><i class="fa-brands fa-twitter"></i></span>Twitter</a></li>
-      <li style="--i:0;--clr:#c32aa3;" data-text="Instagram"><a href="https://www.instagram.com"><span><i class="fa-brands fa-instagram"></i></span>Instagram</a>
-      </li>
-      <li style="--i:1;--clr:#ff0000;" data-text="Youtube"><a href="https://www.youtube.com"><span><i class="fa-brands fa-youtube"></i></span>Youtube</a></li>
-      <li style="--i:2;--clr:#0a66c2;" data-text="Linkedin"><a href="https://www.linkedin.com/in/sohel-khan-74199b277/"><span><i class="fa-brands fa-linkedin-in"></i></span>Linkedin</a>
-      </li>
-    </ul>
-  </section>
 
-  <!-- exp -->
-
-  <section class="contactUs">
-    <div class="content">
-      <p>Get in touch</p>
-      <h2>Contact Me</h2>
-    </div>
-    <div class="container">
-      <div class="contactInfo">
-        <!-- address section -->
-        <div class="box">
-          <div class="icon">
-            <i class="fa-solid fa-map"></i>
-          </div>
-          <div class="text">
-            <h3>Address</h3>
-            <p>KUET , Teligati </p>
-          </div>
-        </div>
-        <!-- phone -->
-        <div class="box">
-          <div class="icon">
-            <i class="fa-solid fa-phone"></i>
-          </div>
-          <div class="text">
-            <h3>Phone</h3>
-            <p>01575353525</p>
-          </div>
-        </div>
-        <!-- Email  -->
-
-        <div class="box">
-          <div class="icon">
+        <div class="profile-socials">
+          <a href="https://www.linkedin.com/in/sohel-khan-74199b277/" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/Sohelkhan26" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a id="btn-whatsapp-chat" href="https://wa.me/8801575353525" target="_blank" rel="noopener noreferrer" class="social-btn" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <button onclick="copyEmailAddress()" class="social-btn" title="Copy Email Address">
             <i class="fa-solid fa-envelope"></i>
-          </div>
-          <div class="text">
-            <h3>Email</h3>
-            <p>sohel2007084@stud.kuet.ac.bd</p>
-          </div>
+          </button>
         </div>
-      </div>
-      <div class="contactForm">
-        <form method="post" action="index.php">
-          <!-- Full name -->
-          <h2>Message Me</h2>
-          <div class="inputBox">
-            <input type="text" name="fullName" required="required">
-            <span>Full Name : </span>
-          </div>
-          <!-- Email -->
-          <div class="inputBox">
-            <input type="text" name="email" required="required">
-            <span>Email : </span>
-          </div>
-          <!-- message -->
-          <textarea name="message" required="required"></textarea>
-          <span>Type your message...</span>
-          <!-- submit -->
-          <div class="inputBox">
-            <input id="submit" type="submit" value="Send" name="submit">
-          </div>
-        </form>
       </div>
     </div>
   </section>
 
-  <!-- exp -->
+  <!-- ==========================================================================
+       ABOUT ME SECTION
+       ========================================================================== -->
+  <section id="about">
+    <div class="container">
+      <p class="section-subtitle">Get To Know More</p>
+      <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
 
+      <div class="about-wrapper">
+        <div class="about-pic-card">
+          <img src="./assets/about-pic.jpeg" alt="Md Shahrukh Khan Sohel" />
+        </div>
 
-  <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="about-content">
+          <div class="about-boxes">
+            <div class="details-box">
+              <i class="fa-solid fa-award details-box-icon"></i>
+              <h3>Experience</h3>
+              <p><span id="about-exp-years">2+ years</span><br /><span id="about-exp-field">Frontend & Software Development</span></p>
+            </div>
+            <div class="details-box">
+              <i class="fa-solid fa-graduation-cap details-box-icon"></i>
+              <h3>Education</h3>
+              <p><span id="about-edu-degree">B.Sc. in CSE</span><br /><span id="about-edu-institute">KUET, Khulna</span></p>
+            </div>
+          </div>
+
+          <div class="about-text-narrative">
+            <p id="about-lead" style="font-weight: 600; color: var(--text-main); margin-bottom: 0.75rem;">
+              Self-taught developer, passionate learner, and problem solver.
+            </p>
+            <p id="about-body">
+              I am currently a student at Khulna University of Engineering and Technology (KUET). I have learned to program through dedicated coursework and hands-on projects, continuously expanding my skillset. I am eager to learn and grow every day. My ambition is to build awesome, intuitive software experiences—not just good enough.
+            </p>
+          </div>
+        </div>
       </div>
-    </nav>
-    <p>Copyright &#169; 2023 Sohel. All Rights Reserved.</p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EXPERIENCE & SKILLS SECTION
+       ========================================================================== -->
+  <section id="experience">
+    <div class="container">
+      <p class="section-subtitle">Explore My</p>
+      <h2 class="section-title">Experience & <span class="gradient-text">Skills</span></h2>
+
+      <div class="experience-boxes-grid">
+        <!-- Programming Languages -->
+        <div class="experience-card">
+          <div class="experience-card-header">
+            <i class="fa-solid fa-code"></i>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skills-article-grid">
+            <article class="skill-article">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>C++</h4>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article class="skill-article">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>Java</h4>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article class="skill-article">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>Python</h4>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article class="skill-article">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>Kotlin</h4>
+                <p>Basic / Mobile</p>
+              </div>
+            </article>
+            <article class="skill-article">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>JavaScript</h4>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article class="skill-article">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>C</h4>
+                <p>Basic</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Frontend & Development Tools -->
+        <div class="experience-card">
+          <div class="experience-card-header">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h3>Frontend & Development</h3>
+          </div>
+          <div class="skills-article-grid">
+            <article class="skill-article">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>HTML & CSS</h4>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article class="skill-article">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>JavaScript ES6+</h4>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article class="skill-article">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>MySQL & Oracle</h4>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article class="skill-article">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>Git & GitHub</h4>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article class="skill-article">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>Responsive UI</h4>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article class="skill-article">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>REST APIs</h4>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROJECTS SECTION (DYNAMIC & EDITABLE VIA ADMIN)
+       ========================================================================== -->
+  <section id="projects">
+    <div class="container">
+      <p class="section-subtitle">Browse My Recent</p>
+      <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+
+      <div class="projects-header-controls">
+        <!-- Search Input -->
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="project-search-input" placeholder="Search projects by title, technology, or keyword..." />
+        </div>
+
+        <!-- Category Filters -->
+        <div class="filter-pills">
+          <button class="filter-pill active" data-filter="all">All Projects</button>
+          <button class="filter-pill" data-filter="web">Web Development</button>
+          <button class="filter-pill" data-filter="mobile">Mobile Apps</button>
+          <button class="filter-pill" data-filter="backend">Database & Systems</button>
+          <button class="filter-pill" data-filter="algorithms">Automation & Tools</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid Container -->
+      <div id="projects-grid-container" class="projects-grid">
+        <!-- Rendered via script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT ME SECTION
+       Only keep WhatsApp number (which is also phone number) and Email.
+       No mention of campus/uni at the bottom.
+       ========================================================================== -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-subtitle">Get In Touch</p>
+      <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+
+      <div class="contact-grid">
+        <!-- Direct Contact Cards -->
+        <div class="contact-info-panel">
+          <!-- WhatsApp / Phone -->
+          <div class="contact-card">
+            <div class="contact-card-left">
+              <div class="contact-icon whatsapp"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <div class="contact-card-label">WhatsApp / Phone</div>
+                <div class="contact-card-val" id="contact-whatsapp-display">+880 1575 353525 (WhatsApp / Phone)</div>
+              </div>
+            </div>
+            <a href="https://wa.me/8801575353525" target="_blank" rel="noopener noreferrer" class="contact-card-btn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Chat / Call
+            </a>
+          </div>
+
+          <!-- Email -->
+          <div class="contact-card">
+            <div class="contact-card-left">
+              <div class="contact-icon email"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <div class="contact-card-label">Email Address</div>
+                <div class="contact-card-val" id="contact-email-display">sohel2007084@stud.kuet.ac.bd</div>
+              </div>
+            </div>
+            <button onclick="copyEmailAddress()" class="contact-card-btn" title="Copy to clipboard">
+              <i class="fa-regular fa-copy"></i> Copy
+            </button>
+          </div>
+        </div>
+
+        <!-- Message Form -->
+        <div class="contact-form-panel">
+          <h3>Message Me</h3>
+          <form id="personal-contact-form">
+            <div class="form-group">
+              <label for="sender-name">Full Name :</label>
+              <input type="text" id="sender-name" class="form-control" placeholder="Your name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="sender-email">Email :</label>
+              <input type="email" id="sender-email" class="form-control" placeholder="your.email@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="sender-message">Message :</label>
+              <textarea id="sender-message" class="form-control" placeholder="Type your message..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              <i class="fa-solid fa-paper-plane"></i> Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer>
+    <div class="container">
+      <ul class="footer-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="footer-bottom">
+        <div id="footer-copyright">
+          Copyright &copy; 2026 Md Shahrukh Khan Sohel. All Rights Reserved.
+        </div>
+
+        <!-- DISCREET ADMIN TRIGGER -->
+        <div>
+          <button id="discreet-admin-lock" class="discreet-admin-lock" title="Admin Portal (Ctrl+Shift+A)">
+            <i class="fa-solid fa-lock"></i>
+            <span>Admin</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <!-- ==========================================================================
+       DISCREET ADMIN LOGIN MODAL
+       Password: "iamlazy.z"
+       ========================================================================== -->
+  <div id="admin-login-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-lock" style="color: var(--accent-color);"></i> Admin Verification</h3>
+        <button class="modal-close-btn" onclick="closeModal(document.getElementById('admin-login-modal'))">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <form id="admin-login-form">
+        <div class="modal-body">
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">
+            Enter your secret admin password to manage projects and edit website texts.
+          </p>
+          <div class="form-group">
+            <label for="admin-password-input">Password</label>
+            <input type="password" id="admin-password-input" class="form-control" placeholder="Enter password..." required autocomplete="current-password" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal(document.getElementById('admin-login-modal'))">Cancel</button>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-key"></i> Unlock</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN ADMIN DASHBOARD MODAL (PROJECTS + TEXTS EDITOR + GITHUB EXPORT)
+       ========================================================================== -->
+  <div id="admin-dashboard-modal" class="modal-overlay">
+    <div class="modal-content modal-lg">
+      <div class="modal-header">
+        <h3>
+          <i class="fa-solid fa-sliders" style="color: var(--accent-color);"></i>
+          <span>Admin Portal</span>
+        </h3>
+        <button class="modal-close-btn" onclick="closeModal(document.getElementById('admin-dashboard-modal'))">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Admin Navigation Tabs -->
+        <div class="admin-tab-buttons">
+          <button class="admin-tab-btn active" data-tab="tab-manage-projects">
+            <i class="fa-solid fa-folder-open"></i> Manage Projects
+          </button>
+          <button class="admin-tab-btn" data-tab="tab-edit-texts">
+            <i class="fa-solid fa-pen-to-square"></i> Edit Site Texts
+          </button>
+          <button class="admin-tab-btn" data-tab="tab-export-github">
+            <i class="fa-brands fa-github"></i> GitHub Pages Publish
+          </button>
+        </div>
+
+        <!-- TAB 1: MANAGE PROJECTS -->
+        <div id="tab-manage-projects" class="admin-tab-content active">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <button class="btn btn-primary" onclick="openAddEditProjectModal()">
+              <i class="fa-solid fa-plus"></i> Add New Project
+            </button>
+            <span id="admin-projects-counter" style="color: var(--text-dim); font-size: 0.85rem; font-weight: 600;"></span>
+          </div>
+
+          <div id="admin-projects-list">
+            <!-- Rendered via script.js -->
+          </div>
+        </div>
+
+        <!-- TAB 2: EDIT SITE TEXTS DIRECTLY -->
+        <div id="tab-edit-texts" class="admin-tab-content">
+          <form id="site-texts-editor-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <!-- Hero Texts -->
+            <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+              <h4 style="margin-bottom: 0.75rem; color: var(--accent-color); font-size: 1rem;"><i class="fa-solid fa-user"></i> Hero Section Texts</h4>
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="text-edit-hero-greeting">Greeting</label>
+                  <input type="text" id="text-edit-hero-greeting" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="text-edit-hero-name">Full Name</label>
+                  <input type="text" id="text-edit-hero-name" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="text-edit-hero-role">Role / Subtitle</label>
+                <input type="text" id="text-edit-hero-role" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="text-edit-hero-bio">Bio / Intro Paragraph</label>
+                <textarea id="text-edit-hero-bio" class="form-control" style="min-height: 80px;"></textarea>
+              </div>
+            </div>
+
+            <!-- About Texts -->
+            <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+              <h4 style="margin-bottom: 0.75rem; color: var(--accent-color); font-size: 1rem;"><i class="fa-solid fa-circle-info"></i> About Me Section Texts</h4>
+              <div class="form-group">
+                <label for="text-edit-about-lead">About Lead Line</label>
+                <input type="text" id="text-edit-about-lead" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="text-edit-about-body">About Narrative Paragraph</label>
+                <textarea id="text-edit-about-body" class="form-control" style="min-height: 90px;"></textarea>
+              </div>
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="text-edit-about-exp-years">Experience Years (e.g. 2+ years)</label>
+                  <input type="text" id="text-edit-about-exp-years" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="text-edit-about-exp-field">Experience Field</label>
+                  <input type="text" id="text-edit-about-exp-field" class="form-control" />
+                </div>
+              </div>
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="text-edit-about-edu-degree">Education Degree</label>
+                  <input type="text" id="text-edit-about-edu-degree" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="text-edit-about-edu-institute">Education University / City</label>
+                  <input type="text" id="text-edit-about-edu-institute" class="form-control" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Numbers -->
+            <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+              <h4 style="margin-bottom: 0.75rem; color: var(--accent-color); font-size: 1rem;"><i class="fa-solid fa-address-book"></i> Contact Info</h4>
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="text-edit-contact-whatsapp">WhatsApp / Phone Number</label>
+                  <input type="text" id="text-edit-contact-whatsapp" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="text-edit-contact-email">Email Address</label>
+                  <input type="email" id="text-edit-contact-email" class="form-control" />
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="align-self: flex-start; padding: 0.7rem 1.5rem;">
+              <i class="fa-solid fa-floppy-disk"></i> Save All Site Texts
+            </button>
+          </form>
+        </div>
+
+        <!-- TAB 3: GITHUB PAGES PUBLISH & EXPORT -->
+        <div id="tab-export-github" class="admin-tab-content">
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">
+              Your changes are saved instantly in your browser's local storage. When you are ready to publish your updates to your free <strong>GitHub Pages domain (Sohelkhan26.github.io)</strong> so every visitor sees them:
+            </p>
+
+            <div style="background: rgba(255,255,255,0.03); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+              <h4 style="font-size: 1rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-code"></i> Update GitHub Pages Repository</h4>
+              <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">
+                Click "Copy site-data.js Code", open your repository's <code>site-data.js</code> file, replace its content, and commit.
+              </p>
+              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <button class="btn btn-primary" onclick="copySiteDataCode()">
+                  <i class="fa-solid fa-copy"></i> Copy site-data.js Code
+                </button>
+                <button class="btn btn-secondary" onclick="exportSiteDataJson()">
+                  <i class="fa-solid fa-file-arrow-down"></i> Download JSON Backup
+                </button>
+              </div>
+            </div>
+
+            <div style="border-top: 1px solid var(--border-color); padding-top: 1rem;">
+              <button class="btn btn-secondary" style="color: #ef4444; border-color: rgba(239, 68, 68, 0.3);" onclick="resetSiteDataToDefaults()">
+                <i class="fa-solid fa-arrow-rotate-left"></i> Reset to Defaults
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer" style="justify-content: space-between;">
+        <button class="btn btn-secondary" style="color: #ef4444; border-color: rgba(239, 68, 68, 0.3);" onclick="adminLogout()">
+          <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </button>
+        <button class="btn btn-primary" onclick="closeModal(document.getElementById('admin-dashboard-modal'))">
+          Done
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       ADD / EDIT PROJECT MODAL
+       ========================================================================== -->
+  <div id="project-editor-modal" class="modal-overlay">
+    <div class="modal-content modal-lg">
+      <div class="modal-header">
+        <h3 id="project-editor-modal-title">
+          <i class="fa-solid fa-pen-nib" style="color: var(--accent-color);"></i> Add Project
+        </h3>
+        <button class="modal-close-btn" onclick="closeModal(document.getElementById('project-editor-modal'))">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <form id="project-editor-form">
+        <div class="modal-body" style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="editor-proj-title">Project Title *</label>
+              <input type="text" id="editor-proj-title" class="form-control" placeholder="e.g. Android Chat App" required />
+            </div>
+            <div class="form-group">
+              <label for="editor-proj-category">Category *</label>
+              <select id="editor-proj-category" class="form-control" required>
+                <option value="web">Web Development</option>
+                <option value="mobile">Mobile Apps</option>
+                <option value="backend">Database & Systems</option>
+                <option value="algorithms">Automation & Tools</option>
+                <option value="other">Engineering Project</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="editor-proj-desc">Description *</label>
+            <textarea id="editor-proj-desc" class="form-control" placeholder="Describe the project..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="editor-proj-tags">Technologies / Tags (comma-separated)</label>
+            <input type="text" id="editor-proj-tags" class="form-control" placeholder="e.g. JavaScript, HTML5, CSS3, MySQL" />
+          </div>
+
+          <!-- Image selector -->
+          <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <label style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; display: block;">Project Thumbnail</label>
+            <div class="form-grid-2" style="margin-bottom: 0.75rem;">
+              <div class="form-group">
+                <label for="editor-asset-select">Select Asset Image</label>
+                <select id="editor-asset-select" class="form-control"></select>
+              </div>
+              <div class="form-group">
+                <label for="editor-proj-file">Or Upload from Computer</label>
+                <input type="file" id="editor-proj-file" class="form-control" accept="image/*" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="editor-proj-img">Image URL / Path</label>
+              <input type="text" id="editor-proj-img" class="form-control" placeholder="./assets/project-3.png or URL" />
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: 0.5rem;">
+              <span style="font-size: 0.8rem; color: var(--text-dim);">Preview:</span>
+              <img id="editor-img-preview" src="./assets/project-3.png" alt="Preview" style="height: 55px; border-radius: 4px; object-fit: cover; border: 1px solid var(--border-color);" />
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="editor-proj-demo">Live Demo URL (Optional)</label>
+              <input type="url" id="editor-proj-demo" class="form-control" placeholder="https://..." />
+            </div>
+            <div class="form-group">
+              <label for="editor-proj-github">GitHub URL (Optional)</label>
+              <input type="url" id="editor-proj-github" class="form-control" placeholder="https://github.com/..." />
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal(document.getElementById('project-editor-modal'))">Cancel</button>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> Save Project</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PROJECT DETAILS MODAL
+       ========================================================================== -->
+  <div id="project-details-modal" class="modal-overlay">
+    <div class="modal-content modal-lg">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-circle-info" style="color: var(--accent-color);"></i> Project Details</h3>
+        <button class="modal-close-btn" onclick="closeModal(document.getElementById('project-details-modal'))">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div id="project-modal-body" class="modal-body">
+        <!-- Rendered via script.js -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal(document.getElementById('project-details-modal'))">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING ADMIN ACTIVE STATUS PILL
+       ========================================================================== -->
+  <div id="admin-mode-pill" class="admin-mode-pill">
+    <span style="width: 8px; height: 8px; background: #10b981; border-radius: 50%;"></span>
+    <span style="font-size: 0.8rem; font-weight: 600;">Admin Mode</span>
+    <button class="btn btn-primary" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;" onclick="openAdminDashboard()">Manage</button>
+    <span onclick="adminLogout()" style="cursor: pointer; font-size: 0.8rem; color: var(--text-dim);" title="Exit admin">Exit</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="site-data.js"></script>
   <script src="script.js"></script>
 </body>
-
 </html>
